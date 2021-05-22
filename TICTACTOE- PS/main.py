@@ -1528,6 +1528,25 @@ def result_userwon_t(oppo,dic,user_chloc, user_chvalue,comp_chloc,comp_chvalue,l
             zira(draw)
             d = ["5"]
             return draw, d
+        
+        if len(storeuser)==4:
+            for i in to_win:
+                # WHEN USER IS WON
+                a = ""  # a is defined
+                for j in range(len(i)):
+                    if i[j] in storeuser:  # checking if cond. is true to add len of 1 in "a"
+                        a += "Y"
+                else:
+                    pass
+                if len(a) == 3:  # when the condition reaches len of 3 before that of comp. it prints user wins
+                    print("YOU WON! ".center(180))
+                    print("".center(84) + oppo + " LOOSE!")
+                    won = ("YOU WON! " + oppo + " LOOSE!")  # 20 or 21
+                    zira(won)
+                    w = ["1", "2", "3"]
+                    return won, w
+        else:
+            pass
 
         # Defining "a" which will test who won the game by adding up by len of 1 if condition is true...
         # When the len of "a" reaches 3 i.e.( the len of elements inside ith element of to_win list), it tells whther match is won or not.
@@ -2348,6 +2367,26 @@ def result_compwon_t(oppo,dic,user_chloc, user_chvalue,comp_chloc,comp_chvalue,l
             zira(draw)
             d = ["5"]
             return draw, d
+        
+        if len(storeuser)==4:
+            for i in to_win:
+                # WHEN USER IS WON
+                a = ""  # a is defined
+                for j in range(len(i)):
+                    if i[j] in storeuser:  # checking if cond. is true to add len of 1 in "a"
+                        a += "Y"
+                else:
+                    pass
+                if len(a) == 3:  # when the condition reaches len of 3 before that of comp. it prints user wins
+                    print("YOU WON! ".center(180))
+                    print("".center(84) + oppo + " LOOSE!")
+                    won = ("YOU WON! " + oppo + " LOOSE!")  # 20 or 21
+                    zira(won)
+                    w = ["1", "2", "3"]
+                    return won, w
+        else:
+            pass
+       
         # Defining "a" which will test who won the game by adding up by len of 1 if condition is true...
         # When the len of "a" reaches 3 i.e.( the len of elements inside ith element of to_win list), it tells whther match is won or not.
 
